@@ -131,3 +131,4 @@ void push( int x )
         display();
     }
 
+    //Code Implementatiom of Stack using Linkedlist completed 

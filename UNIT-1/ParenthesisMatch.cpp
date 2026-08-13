@@ -45,3 +45,5 @@ int main()
     return 0;
 }
 // This code checks if the given expression has balanced parentheses, brackets, and braces using a stack data structure. It defines a function `isMatching` to check if two characters are matching pairs of parentheses, and a function `isBalanced` to determine if the entire expression is balanced. The main function takes an input expression from the user and outputs whether it is balanced or not.
+
+    //Code Implementatiom of ParenthesisMatch completed 

@@ -139,3 +139,6 @@ int isFull(struct Stack st)
 
     return 0;
 }
+//Code Implementatiom of Stack using array completed 
+
+

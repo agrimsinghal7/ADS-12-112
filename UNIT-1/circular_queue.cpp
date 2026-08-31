@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Node
@@ -20,18 +20,30 @@ class Queue
     Node* rear;
 
 public:
-
     Queue()
     {
         front = NULL;
         rear = NULL;
     }
 
-    void enqueue(int value)
+    bool isEmpty()
     {
-        Node* newNode = new Node(value);
+        return front == NULL;
+    }
 
-        if(front == NULL)
+    void enqueue(int info)
+    {
+        Node* newNode = new Node;
+        newNode->data=info;
+        if(front==NULL)
+        {
+            
+        }
+
+
+
+
+        if(isEmpty())
         {
             front = newNode;
             rear = newNode;
@@ -47,7 +59,7 @@ public:
 
     void dequeue()
     {
-        if(front == NULL)
+        if(isEmpty())
         {
             cout << "Queue is empty" << endl;
             return;
@@ -68,9 +80,31 @@ public:
         }
     }
 
+    int getFront()
+    {
+        if(isEmpty())
+        {
+            cout << "Queue is empty" << endl;
+            return -1;
+        }
+
+        return front->data;
+    }
+
+    int getRear()
+    {
+        if(isEmpty())
+        {
+            cout << "Queue is empty" << endl;
+            return -1;
+        }
+
+        return rear->data;
+    }
+
     void display()
     {
-        if(front == NULL)
+        if(isEmpty())
         {
             cout << "Queue is empty" << endl;
             return;
@@ -101,6 +135,9 @@ int main()
     cout << "Circular Queue: ";
     q.display();
 
+    cout << "Front Element: " << q.getFront() << endl;
+    cout << "Rear Element: " << q.getRear() << endl;
+
     q.dequeue();
 
     cout << "After Dequeue: ";
@@ -110,6 +147,8 @@ int main()
 
     cout << "After Enqueue: ";
     q.display();
+
+    cout << "Is Queue Empty: " << q.isEmpty() << endl;
 
     return 0;
 }
